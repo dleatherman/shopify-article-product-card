@@ -11,5 +11,13 @@
     "shopify"
   ],
   "author": "Dan Leatherman <dleatherman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dleatherman/shopify-article-product-card.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dleatherman/shopify-article-product-card/issues"
+  },
+  "homepage": "https://github.com/dleatherman/shopify-article-product-card#readme"
 }
