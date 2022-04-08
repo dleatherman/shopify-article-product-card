@@ -1,6 +1,6 @@
 {
   "name": "shopify-article-product-card",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A web component for pulling product cards into shopify articles",
   "main": "article-product-card.js",
   "scripts": {
