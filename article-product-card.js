@@ -17,17 +17,19 @@ class ArticleProductCard extends HTMLElement {
 
   renderMedia(product) {
     return `
-      <div class="media media--${this.image_ratio} media--transparent media--hover-effect">
-        <img
-          src="${product.image.src}"
-          alt="${product.image.alt ? product.image.alt : product.title}"
-          sizes="100vw"
-          class="motion-reduce"
-          loading="lazy"
-          height="${product.image.height}"
-          width="${product.image.width}"
-        >
-      </div>
+	  <div class="card__media">
+        <div class="media media--${this.image_ratio} media--transparent media--hover-effect">
+          <img
+            src="${product.image.src}"
+            alt="${product.image.alt ? product.image.alt : product.title}"
+            sizes="100vw"
+            class="motion-reduce"
+            loading="lazy"
+            height="${product.image.height}"
+            width="${product.image.width}"
+          >
+        </div>
+	  </div>
     `
   }
 
@@ -81,21 +83,35 @@ class ArticleProductCard extends HTMLElement {
 
   renderProduct(product) {
     if (!product) return;
+    this.classList = 'grid product-grid grid--1-col';
     const template = document.createElement('div');
-    console.log(this.show_vendor, product.vendor);
+    template.classList = 'grid__item';
     template.innerHTML = `
-      <div class="card-wrapper">
-        <div class="card ${product.image ? 'card--media' : 'card-text'}">
-          <div class="card-inner">
+      <div class="card-wrapper underline-links-hover">
+        <div class="card card--standard ${product.image ? 'card--media' : 'card-text'}" style="--ratio-percent: 100%;">
+          <div class="card__inner ratio">
             ${product.image ? this.renderMedia(product) : ''}
-            <div class="card-content">
-              <div class="card-information">
-                <h3 class="card-heading">
-                  <a href="/products/${product.handle}">${product.title}</a>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading h5">
+                  <a href="/products/${product.handle}" class="full-unstyled-link">${product.title}</a>
                 </h3>
-                ${this.show_vendor ? this.renderVendor(product) : ''}
+                <div class="card-information">
+                  ${this.show_vendor ? this.renderVendor(product) : ''}
+                </div>
                 ${this.show_price ? this.renderPrice(product) : ''}
               </div>
+            </div>
+          </div>
+          <div class="card__content">
+            <div class="card__information">
+              <h3 class="card__heading h5">
+                <a href="/products/${product.handle}" class="full-unstyled-link">${product.title}</a>
+              </h3>
+              <div class="card-information">
+                ${this.show_vendor ? this.renderVendor(product) : ''}
+              </div>
+              ${this.show_price ? this.renderPrice(product) : ''}
             </div>
           </div>
         </div>
