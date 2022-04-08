@@ -1,0 +1,15 @@
+{
+  "name": "shopify-article-product-card",
+  "version": "0.0.1",
+  "description": "A web component for pulling product cards into shopify articles",
+  "main": "article-product-card.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web component",
+    "shopify"
+  ],
+  "author": "Dan Leatherman <dleatherman@gmail.com>",
+  "license": "MIT"
+}
