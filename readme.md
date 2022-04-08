@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/shopify-article-product-card.svg)](https://badge.fury.io/js/shopify-article-product-card)
+
 # Shopify Article Product Card
 
 ![](card.png)
